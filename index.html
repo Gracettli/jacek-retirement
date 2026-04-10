@@ -6,7 +6,7 @@
   <title>Jacek's Retirement Celebration</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
+ 
     body {
       min-height: 100vh;
       background: linear-gradient(160deg, #0a1628 0%, #162040 40%, #1a2a50 100%);
@@ -17,8 +17,7 @@
       padding: 24px;
       overflow-x: hidden;
     }
-
-    /* Confetti */
+ 
     .confetti-piece {
       position: fixed;
       top: -20px;
@@ -28,30 +27,21 @@
       pointer-events: none;
       z-index: 0;
     }
-
     @keyframes confettiFall {
       0%   { transform: translateY(-20px) rotate(0deg); opacity: 0.8; }
       100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
     }
-
-    /* Orbs */
-    .orb {
-      position: fixed;
-      border-radius: 50%;
-      pointer-events: none;
-    }
+ 
+    .orb { position: fixed; border-radius: 50%; pointer-events: none; }
     .orb-top {
-      top: -80px; right: -80px;
-      width: 320px; height: 320px;
+      top: -80px; right: -80px; width: 320px; height: 320px;
       background: radial-gradient(circle, rgba(212,175,55,0.12) 0%, transparent 70%);
     }
     .orb-bottom {
-      bottom: -60px; left: -60px;
-      width: 280px; height: 280px;
+      bottom: -60px; left: -60px; width: 280px; height: 280px;
       background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%);
     }
-
-    /* Card wrapper */
+ 
     .wrapper {
       max-width: 560px;
       width: 100%;
@@ -61,12 +51,8 @@
       transform: translateY(30px);
       transition: opacity 1s ease, transform 1s ease;
     }
-    .wrapper.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Card */
+    .wrapper.visible { opacity: 1; transform: translateY(0); }
+ 
     .card {
       background: linear-gradient(145deg, #1c2e52 0%, #162040 100%);
       border: 1px solid rgba(212,175,55,0.3);
@@ -74,78 +60,38 @@
       overflow: hidden;
       box-shadow: 0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(212,175,55,0.1), inset 0 1px 0 rgba(212,175,55,0.2);
     }
-
+ 
     .gold-band {
       background: linear-gradient(90deg, #8B6914, #D4AF37, #F5E6A3, #D4AF37, #8B6914);
       height: 6px;
     }
-
+ 
     /* Header */
     .header {
       padding: 40px 48px 28px;
       text-align: center;
       border-bottom: 1px solid rgba(212,175,55,0.15);
     }
-    .champagne { font-size: 48px; margin-bottom: 12px; filter: drop-shadow(0 2px 8px rgba(212,175,55,0.5)); }
-    .invited-label {
-      color: #D4AF37;
-      font-size: 11px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .name {
-      color: #F5E6A3;
-      font-size: 42px;
-      font-weight: normal;
-      line-height: 1.1;
-      text-shadow: 0 2px 20px rgba(212,175,55,0.3);
-      margin-bottom: 6px;
-    }
-    .retirement {
-      color: #D4AF37;
-      font-size: 26px;
-      font-weight: normal;
-      letter-spacing: 3px;
-      margin-bottom: 4px;
-    }
-    .celebration {
-      color: rgba(245,230,163,0.6);
-      font-size: 13px;
-      font-weight: normal;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-    }
-
+    .champagne { font-size: 52px; margin-bottom: 12px; filter: drop-shadow(0 2px 8px rgba(212,175,55,0.5)); }
+    .invited-label { color: #D4AF37; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 16px; }
+    .name { color: #F5E6A3; font-size: 52px; font-weight: normal; line-height: 1.1; text-shadow: 0 2px 20px rgba(212,175,55,0.3); margin-bottom: 6px; }
+    .retirement { color: #D4AF37; font-size: 30px; font-weight: normal; letter-spacing: 3px; margin-bottom: 4px; }
+    .celebration { color: rgba(245,230,163,0.6); font-size: 15px; font-weight: normal; letter-spacing: 4px; text-transform: uppercase; }
+ 
     /* Divider */
-    .divider {
-      display: flex;
-      align-items: center;
-      padding: 0 48px;
-      margin: 24px 0 0;
-    }
-    .divider-line {
-      flex: 1;
-      height: 1px;
-    }
+    .divider { display: flex; align-items: center; padding: 0 48px; margin: 24px 0 0; }
+    .divider-line { flex: 1; height: 1px; }
     .divider-line.left  { background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); }
     .divider-line.right { background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); }
     .divider-star { color: #D4AF37; font-size: 18px; padding: 0 16px; }
-
+ 
     /* Body */
     .body { padding: 20px 48px 32px; }
-
-    .intro {
-      color: rgba(245,230,163,0.75);
-      font-size: 14px;
-      line-height: 1.8;
-      text-align: center;
-      font-style: italic;
-      margin-bottom: 28px;
-    }
+ 
+    .intro { color: rgba(245,230,163,0.75); font-size: 16px; line-height: 1.8; text-align: center; font-style: italic; margin-bottom: 28px; }
     .intro strong { color: #D4AF37; font-style: normal; }
-
-    /* Details box */
+ 
+    /* Details */
     .details-box {
       background: rgba(212,175,55,0.05);
       border: 1px solid rgba(212,175,55,0.15);
@@ -153,36 +99,16 @@
       padding: 20px 24px;
       margin-bottom: 24px;
     }
-    .detail-row {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      padding: 8px 0;
-    }
+    .detail-row { display: flex; align-items: center; gap: 14px; padding: 8px 0; }
     .detail-row.bordered { border-bottom: 1px solid rgba(212,175,55,0.1); }
-    .detail-icon { font-size: 18px; }
-    .detail-label {
-      color: #D4AF37;
-      font-size: 9px;
-      letter-spacing: 3px;
-      margin-bottom: 2px;
-    }
-    .detail-value {
-      color: rgba(245,230,163,0.7);
-      font-size: 13px;
-      font-style: italic;
-    }
-
-    /* Plan text */
-    .plan {
-      color: rgba(245,230,163,0.65);
-      font-size: 13px;
-      line-height: 1.8;
-      text-align: center;
-      margin-bottom: 24px;
-    }
+    .detail-icon { font-size: 20px; }
+    .detail-label { color: #D4AF37; font-size: 10px; letter-spacing: 3px; margin-bottom: 2px; }
+    .detail-value { color: rgba(245,230,163,0.75); font-size: 15px; font-style: italic; }
+ 
+    /* Plan */
+    .plan { color: rgba(245,230,163,0.65); font-size: 15px; line-height: 1.8; text-align: center; margin-bottom: 24px; }
     .plan span { color: #D4AF37; }
-
+ 
     /* RSVP */
     .rsvp-box {
       background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.05));
@@ -192,63 +118,30 @@
       text-align: center;
       margin-bottom: 20px;
     }
-    .rsvp-title {
-      color: #D4AF37;
-      font-size: 10px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .rsvp-sub {
-      color: rgba(245,230,163,0.55);
-      font-size: 12px;
-    }
-
+    .rsvp-title { color: #D4AF37; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
+    .rsvp-sub { color: rgba(245,230,163,0.55); font-size: 14px; }
+ 
     /* Grid */
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    .grid-box {
-      background: rgba(255,255,255,0.02);
-      border: 1px solid rgba(212,175,55,0.1);
-      border-radius: 3px;
-      padding: 14px;
-    }
-    .grid-title { color: #D4AF37; font-size: 11px; margin-bottom: 6px; }
-    .grid-text { color: rgba(245,230,163,0.5); font-size: 11px; line-height: 1.7; }
-
-    /* Sign off */
-    .signoff {
-      color: rgba(245,230,163,0.5);
-      font-size: 13px;
-      text-align: center;
-      font-style: italic;
-    }
-
-    /* Tagline */
-    .tagline {
-      color: rgba(212,175,55,0.35);
-      font-size: 11px;
-      text-align: center;
-      margin-top: 20px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+    .grid-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.1); border-radius: 3px; padding: 14px; }
+    .grid-title { color: #D4AF37; font-size: 13px; margin-bottom: 6px; }
+    .grid-text { color: rgba(245,230,163,0.5); font-size: 13px; line-height: 1.7; }
+ 
+    .signoff { color: rgba(245,230,163,0.5); font-size: 15px; text-align: center; font-style: italic; }
+ 
+    .tagline { color: rgba(212,175,55,0.35); font-size: 11px; text-align: center; margin-top: 20px; letter-spacing: 3px; text-transform: uppercase; }
   </style>
 </head>
 <body>
-
+ 
   <div class="orb orb-top"></div>
   <div class="orb orb-bottom"></div>
   <div id="confetti-container"></div>
-
+ 
   <div class="wrapper" id="card-wrapper">
     <div class="card">
       <div class="gold-band"></div>
-
+ 
       <div class="header">
         <div class="champagne">🥂</div>
         <p class="invited-label">You're Invited</p>
@@ -256,18 +149,18 @@
         <h2 class="retirement">RETIREMENT</h2>
         <h3 class="celebration">Celebration</h3>
       </div>
-
+ 
       <div class="divider">
         <div class="divider-line left"></div>
         <div class="divider-star">✦</div>
         <div class="divider-line right"></div>
       </div>
-
+ 
       <div class="body">
         <p class="intro">
           After <strong>41 remarkable years</strong>, Jacek has traded in his spreadsheets and pivot tables for new adventures. Come raise a glass as we celebrate his incredible career and this exciting new chapter.
         </p>
-
+ 
         <div class="details-box">
           <div class="detail-row bordered">
             <span class="detail-icon">📅</span>
@@ -284,45 +177,41 @@
             </div>
           </div>
         </div>
-
+ 
         <p class="plan">
           We'll be gathering for <span>drinks</span>, <span>appetizers</span>, and a <span>celebratory dinner</span>. Come ready to share your favourite Jacek memories!
         </p>
-
+ 
         <div class="rsvp-box">
           <p class="rsvp-title">RSVP by May 1st</p>
           <p class="rsvp-sub">Please reply so we can confirm final numbers with the restaurant</p>
         </div>
-
+ 
         <div class="grid">
           <div class="grid-box">
             <p class="grid-title">Sign the Card 💌</p>
-            <p class="grid-text">Burnside → see us<br>680 → see G<br>Or sign at the restaurant</p>
+            <p class="grid-text">Burnside → see Colin<br>680 Sherbrooke → see Grace<br>Or sign at the restaurant</p>
           </div>
           <div class="grid-box">
             <p class="grid-title">Gift Contribution 🎁</p>
-            <p class="grid-text">See G or us in person, or reach out for e-transfer details</p>
+            <p class="grid-text">See us in person or e-transfer:<br><a href="mailto:gracett.li@gmail.com" style="color:#D4AF37; text-decoration:none; border-bottom: 1px solid rgba(212,175,55,0.4);">gracett.li@gmail.com</a></p>
           </div>
         </div>
-
+ 
         <p class="signoff">We can't wait to celebrate with you! 🥂</p>
       </div>
-
+ 
       <div class="gold-band"></div>
     </div>
-
+ 
     <p class="tagline">41 Years · Well Earned</p>
   </div>
-
+ 
   <script>
-    // Animate card in
     window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('card-wrapper').classList.add('visible');
-      }, 100);
+      setTimeout(() => document.getElementById('card-wrapper').classList.add('visible'), 100);
     });
-
-    // Generate confetti
+ 
     const container = document.getElementById('confetti-container');
     const colors = ['#D4AF37', '#F5E6A3', '#FFFFFF', '#C8941A', '#E8D5A3'];
     for (let i = 0; i < 40; i++) {
