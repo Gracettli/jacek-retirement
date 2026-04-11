@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jacek's Retirement Celebration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
  
@@ -73,8 +74,17 @@
     }
     .champagne { font-size: 52px; margin-bottom: 12px; filter: drop-shadow(0 2px 8px rgba(212,175,55,0.5)); }
     .invited-label { color: #D4AF37; font-size: 13px; letter-spacing: 5px; text-transform: uppercase; margin-bottom: 16px; }
-    .name { color: #F5E6A3; font-size: 52px; font-weight: normal; line-height: 1.1; text-shadow: 0 2px 20px rgba(212,175,55,0.3); margin-bottom: 6px; }
-    .retirement { color: #D4AF37; font-size: 30px; font-weight: normal; letter-spacing: 3px; margin-bottom: 4px; }
+    .name {
+      color: #F5E6A3;
+      font-size: 72px;
+      font-weight: 700;
+      line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(212,175,55,0.3);
+      margin-bottom: 6px;
+      font-family: 'Bodoni Moda', serif; font-style: normal;
+      letter-spacing: -1px;
+    }
+    .retirement { color: #D4AF37; font-size: 30px; font-weight: normal; letter-spacing: -1px; margin-bottom: 4px; }
     .celebration { color: rgba(245,230,163,0.6); font-size: 15px; font-weight: normal; letter-spacing: 4px; text-transform: uppercase; }
  
     .divider { display: flex; align-items: center; padding: 0 48px; margin: 24px 0 0; }
@@ -98,8 +108,8 @@
     .detail-row { display: flex; align-items: center; gap: 14px; padding: 8px 0; }
     .detail-row.bordered { border-bottom: 1px solid rgba(212,175,55,0.1); }
     .detail-icon { font-size: 20px; }
-    .detail-label { color: #D4AF37; font-size: 10px; letter-spacing: 3px; margin-bottom: 2px; }
-    .detail-value { color: rgba(245,230,163,0.75); font-size: 15px; font-style: italic; }
+    .detail-label { color: #D4AF37; font-size: 10px; letter-spacing: -1px; margin-bottom: 2px; }
+    .detail-value { color: rgba(245,230,163,0.75); font-size: 15px; font-style: italic; line-height: 1.5; }
  
     .plan { color: rgba(245,230,163,0.65); font-size: 15px; line-height: 1.8; text-align: center; margin-bottom: 24px; }
     .plan span { color: #D4AF37; }
@@ -123,7 +133,7 @@
  
     .forward-note { color: rgba(245,230,163,0.5); font-size: 13px; text-align: center; font-style: italic; margin-bottom: 16px; line-height: 1.6; }
     .signoff { color: rgba(245,230,163,0.5); font-size: 15px; text-align: center; font-style: italic; }
-    .tagline { color: rgba(212,175,55,0.35); font-size: 11px; text-align: center; margin-top: 20px; letter-spacing: 3px; text-transform: uppercase; }
+    .tagline { color: rgba(212,175,55,0.35); font-size: 11px; text-align: center; margin-top: 20px; letter-spacing: -1px; text-transform: uppercase; }
   </style>
 </head>
 <body>
@@ -167,7 +177,10 @@
             <span class="detail-icon">&#x1F4CD;</span>
             <div>
               <div class="detail-label">WHERE</div>
-              <div class="detail-value">Weinstein &amp; Gavino's<br><span style="font-size:13px;">1434 Crescent, Montr&eacute;al, QC <span style="font-size:12px;">H3G 2B5</span></span></div>
+              <div class="detail-value">
+                Weinstein &amp; Gavino's<br>
+                <span style="font-size:13px;">1434 Crescent, Montr&eacute;al, QC <span style="font-size:12px;">H3G 2B5</span></span>
+              </div>
             </div>
           </div>
         </div>
