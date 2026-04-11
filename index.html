@@ -66,7 +66,6 @@
       height: 6px;
     }
  
-    /* Header */
     .header {
       padding: 40px 48px 28px;
       text-align: center;
@@ -78,20 +77,17 @@
     .retirement { color: #D4AF37; font-size: 30px; font-weight: normal; letter-spacing: 3px; margin-bottom: 4px; }
     .celebration { color: rgba(245,230,163,0.6); font-size: 15px; font-weight: normal; letter-spacing: 4px; text-transform: uppercase; }
  
-    /* Divider */
     .divider { display: flex; align-items: center; padding: 0 48px; margin: 24px 0 0; }
     .divider-line { flex: 1; height: 1px; }
     .divider-line.left  { background: linear-gradient(90deg, transparent, rgba(212,175,55,0.4)); }
     .divider-line.right { background: linear-gradient(90deg, rgba(212,175,55,0.4), transparent); }
     .divider-star { color: #D4AF37; font-size: 18px; padding: 0 16px; }
  
-    /* Body */
     .body { padding: 20px 48px 32px; }
  
     .intro { color: rgba(245,230,163,0.75); font-size: 16px; line-height: 1.8; text-align: center; font-style: italic; margin-bottom: 28px; }
     .intro strong { color: #D4AF37; font-style: normal; }
  
-    /* Details */
     .details-box {
       background: rgba(212,175,55,0.05);
       border: 1px solid rgba(212,175,55,0.15);
@@ -105,11 +101,9 @@
     .detail-label { color: #D4AF37; font-size: 10px; letter-spacing: 3px; margin-bottom: 2px; }
     .detail-value { color: rgba(245,230,163,0.75); font-size: 15px; font-style: italic; }
  
-    /* Plan */
     .plan { color: rgba(245,230,163,0.65); font-size: 15px; line-height: 1.8; text-align: center; margin-bottom: 24px; }
     .plan span { color: #D4AF37; }
  
-    /* RSVP */
     .rsvp-box {
       background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(212,175,55,0.05));
       border: 1px solid rgba(212,175,55,0.25);
@@ -119,13 +113,13 @@
       margin-bottom: 20px;
     }
     .rsvp-title { color: #D4AF37; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 4px; }
-    .rsvp-sub { color: rgba(245,230,163,0.55); font-size: 14px; }
+    .rsvp-sub { color: rgba(245,230,163,0.55); font-size: 13px; line-height: 1.6; }
  
-    /* Grid */
     .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
     .grid-box { background: rgba(255,255,255,0.02); border: 1px solid rgba(212,175,55,0.1); border-radius: 3px; padding: 14px; }
     .grid-title { color: #D4AF37; font-size: 13px; margin-bottom: 6px; }
     .grid-text { color: rgba(245,230,163,0.5); font-size: 13px; line-height: 1.7; }
+    .grid-text a { color: #D4AF37; text-decoration: none; border-bottom: 1px solid rgba(212,175,55,0.4); }
  
     .signoff { color: rgba(245,230,163,0.5); font-size: 15px; text-align: center; font-style: italic; }
  
@@ -143,7 +137,7 @@
       <div class="gold-band"></div>
  
       <div class="header">
-        <div class="champagne">🥂</div>
+        <div class="champagne">&#x1F942;</div>
         <p class="invited-label">You're Invited</p>
         <h1 class="name">Jacek's</h1>
         <h2 class="retirement">RETIREMENT</h2>
@@ -152,7 +146,7 @@
  
       <div class="divider">
         <div class="divider-line left"></div>
-        <div class="divider-star">✦</div>
+        <div class="divider-star">&#10022;</div>
         <div class="divider-line right"></div>
       </div>
  
@@ -163,17 +157,17 @@
  
         <div class="details-box">
           <div class="detail-row bordered">
-            <span class="detail-icon">📅</span>
+            <span class="detail-icon">&#x1F4C5;</span>
             <div>
               <div class="detail-label">WHEN</div>
-              <div class="detail-value">Wednesday, May 21st · 5:30 PM onwards</div>
+              <div class="detail-value">Wednesday, May 21st &middot; 5:30 PM onwards</div>
             </div>
           </div>
           <div class="detail-row">
-            <span class="detail-icon">📍</span>
+            <span class="detail-icon">&#x1F4CD;</span>
             <div>
               <div class="detail-label">WHERE</div>
-              <div class="detail-value">Weinstein &amp; Gavino's · 1434 Crescent, Montréal, QC H3G 2B5</div>
+              <div class="detail-value">Weinstein &amp; Gavino's &middot; 1434 Crescent, Montr&eacute;al, QC <span style="font-size:12px;">H3G 2B5</span></div>
             </div>
           </div>
         </div>
@@ -185,42 +179,51 @@
         <div class="rsvp-box">
           <p class="rsvp-title">RSVP by May 1st</p>
           <p class="rsvp-sub">Please reply so we can confirm final numbers with the restaurant</p>
-          <p class="rsvp-sub" style="margin-top:8px; font-style:italic;">Up to May 1st, please feel free to forward the invitation to any colleagues who might be interested in joining.</p>
         </div>
  
         <div class="grid">
           <div class="grid-box">
-            <p class="grid-title">Sign the Card 💌</p>
-            <p class="grid-text">Burnside → see Colin<br>680 Sherbrooke → see Grace<br>Or sign at the restaurant</p>
+            <p class="grid-title">Sign the Card &#x1F48C;</p>
+            <p class="grid-text">Burnside &#x2192; see Colin<br>680 Sherbrooke &#x2192; see Grace<br>Or sign at the restaurant</p>
           </div>
           <div class="grid-box">
-            <p class="grid-title">Gift Contribution 🎁</p>
-            <p class="grid-text">See us in person or e-transfer:<br><a href="/cdn-cgi/l/email-protection#bcdbcedddfd9c8c892d0d5fcdbd1ddd5d092dfd3d1" style="color:#D4AF37; text-decoration:none; border-bottom: 1px solid rgba(212,175,55,0.4);"><span class="__cf_email__" data-cfemail="3750455654524343195b5e77505a565e5b1954585a">[email&#160;protected]</span></a></p>
+            <p class="grid-title">Gift Contribution &#x1F381;</p>
+            <p class="grid-text">See us in person or e-transfer:<br><a href="mailto:gracett.li&#64;gmail.com">gracett.li&#64;gmail.com</a></p>
           </div>
         </div>
  
-        <p class="signoff">We can't wait to celebrate with you! 🥂</p>
+        <p style="color:rgba(245,230,163,0.5); font-size:13px; text-align:center; font-style:italic; margin-bottom:16px;">Up to May 1st, please feel free to forward the invitation to any colleagues who might be interested in joining.</p>
+        <p class="signoff">We can't wait to celebrate with you! &#x1F942;</p>
       </div>
  
       <div class="gold-band"></div>
     </div>
  
-    <p class="tagline">41 Years · Well Earned</p>
+    <p class="tagline">41 Years &middot; Well Earned</p>
   </div>
  
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    window.addEventListener('load', () => {
-      setTimeout(() => document.getElementById('card-wrapper').classList.add('visible'), 100);
+  <script>
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('card-wrapper').classList.add('visible');
+      }, 100);
     });
  
-    const container = document.getElementById('confetti-container');
-    const colors = ['#D4AF37', '#F5E6A3', '#FFFFFF', '#C8941A', '#E8D5A3'];
-    for (let i = 0; i < 40; i++) {
-      const el = document.createElement('div');
+    var container = document.getElementById('confetti-container');
+    var colors = ['#D4AF37', '#F5E6A3', '#FFFFFF', '#C8941A', '#E8D5A3'];
+    for (var i = 0; i < 40; i++) {
+      var el = document.createElement('div');
       el.className = 'confetti-piece';
-      const size = (6 + Math.random() * 8) + 'px';
+      var size = (6 + Math.random() * 8) + 'px';
       el.style.left = (Math.random() * 100) + '%';
       el.style.width = size;
       el.style.height = size;
       el.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      el.style
+      el.style.borderRadius = Math.random() > 0.5 ? '50%' : '2px';
+      el.style.animationDuration = (3 + Math.random() * 4) + 's';
+      el.style.animationDelay = (Math.random() * 4) + 's';
+      container.appendChild(el);
+    }
+  </script>
+</body>
+</html>
